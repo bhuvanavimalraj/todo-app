@@ -29,30 +29,54 @@
 
     <link
       rel="stylesheet"
-      href="/Users/vimalrajselvam/Desktop/Bhuvana-Projects/To-Do-Project/To-Do-List.css"
+      href="/Users/vimalrajselvam/Desktop/Bhuvana-Projects/todo-app/To-Do-List.css"
     />
   </head>
   <body>
     <div class="container">
       <div class="header">
         <div class="clear">
-          <i class="bi bi-arrow-clockwise" aria-hidden="true"></i>
+          <i class="fa fa-refresh" aria-hidden="true"></i>
         </div>
-        <div class="date" id="date">Date:</div>
+        <div class="date" id="date"></div>
       </div>
+
       <div class="row">
         <div class="content">
           <ul id="list">
-            
+            <!-- <li class="item">
+              <i class="fa fa-circle-thin co" job="complete" id="0"></i>
+              <p class="text">${toDo}</p>
+              <i class="fa fa-trash-o de" job="delete" id="0"></i> -->
+            <!-- <div class="row"> -->
+            <!-- <div class="col-1">
+                  <i
+                    class="fa fa-check-circle co ${done}"
+                    job="complete"
+                    id="${id}"
+                  ></i>
+                </div> -->
+            <!-- <div class="col">
+                  <p class="text line-through ${line}">${toDo}</p>
+                </div> -->
+            <!-- <div class="col-1">
+                  <i class="fa fa-trash-o de" job="delete" id="${id}"></i>
+                </div> -->
+            <!-- </div> -->
+            <!-- </li> -->
           </ul>
 
           <div class="add-item">
-            <i class="bi bi-plus-circle" aria-hidden="true"></i>
+            <i
+              class="fa fa-plus-circle"
+              id="add-btn-icon"
+              aria-hidden="true"
+            ></i>
             <input type="text" id="input" placeholder="Add a To-Do" />
           </div>
         </div>
       </div>
     </div>
-    <script src="/Users/vimalrajselvam/Desktop/Bhuvana-Projects/To-Do-Project/To-Do.js"></script>
+    <script src="/Users/vimalrajselvam/Desktop/Bhuvana-Projects/todo-app/To-Do.js"></script>
   </body>
 </html>
