@@ -43,24 +43,25 @@ function addToDo() {
 
   list.insertAdjacentHTML(position, item);
 }
-// addToDo("Tomato");
-// addToDo("Onion");
-// addToDo("Green Chilli");
-// addToDo("Drink Coffee");
 
 //add an item
 input.addEventListener("keyup", function (event) {
-  if (event.key === "Enter") {
-    addToDo();
-    // list.push({
-    //         name: todo,
-    //         id: id,
-    //         done: false,
-    //         trash: false,
-    //       });
+  if (event.key === 13) {
+    let todo = input.value;
 
-    //     input.value = "";
-    //     id++;
+    //if the input isn't empty
+    if (todo) {
+      addToDo(todo, id, false, false);
+
+      list.push({
+        name: todo,
+        id: id,
+        done: false,
+        trash: false,
+      });
+      id++;
+    }
+    input.value = "";
   }
 });
 
