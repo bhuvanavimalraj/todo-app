@@ -47,15 +47,11 @@ li {
   font-size: 20px;
   opacity: 0.5px;
 }
-.add-item {
-  font-size: 30px;
-  margin: 10px;
-  padding: 10px;
-}
 .hr {
   opacity: 0.6px;
 }
 .add-item {
+  font-size: 30px;
   margin-left: 10px;
   padding: 0;
   margin-top: 200px;

@@ -6,9 +6,9 @@ let input = document.getElementById("input");
 let addBtnIcon = document.getElementById("add-btn-icon");
 
 //Classes
-let check = "bi bi-check-circle-fill";
-let uncheck = "bi bi-circle";
-let line_through = "lineThrough";
+let CHECK = "bi bi-check-circle-fill";
+let UNCHECK = "bi bi-circle";
+let LINE_THROUGH = "lineThrough";
 
 //date
 let options = { weekday: "long", month: "short", day: "numeric" };
@@ -68,4 +68,30 @@ input.addEventListener("keyup", function (event) {
 addBtnIcon.addEventListener("click", function (event) {
   event.preventDefault();
   addToDo();
+});
+
+//Complete todo
+function completeToDo(element) {
+  element.classlist.toggle(CHECK);
+  element.classlist.toggle(UNCHECK);
+  element.parentNode.querySelector(".text").classlist.toggle(line_through);
+
+  LIST[element.id].done = list[element.id].done ? false : true;
+}
+
+//remove todo
+function removeToDo(element) {
+  element.parentNode.parentNode.removeChild(element.parentNode);
+  LIST[element.id].trash = true;
+}
+list.addEventListener("click", function (event) {
+  let element = event.target;
+  let elementJob = element.attributes.job.value;
+
+  if (elementJob === "complete") {
+    completeToDo(element);
+  } else elementJob === "delete";
+  {
+    removeToDo(element);
+  }
 });
